@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="3cbde1e0-72e6-4521-8db9-eb817e99825c" Publisher="CN=long_long" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>FamilyDaily</DisplayName>
+    <PublisherDisplayName>long_long</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="FamilyDaily.App">
+      <VisualElements DisplayName="FamilyDaily" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="FamilyDaily" ForegroundText="dark" BackgroundColor="#464646">
+        <DefaultTile ShowName="noLogos" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#FFFFFF" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="picturesLibrary" />
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="webcam" />
+  </Capabilities>
+</Package>

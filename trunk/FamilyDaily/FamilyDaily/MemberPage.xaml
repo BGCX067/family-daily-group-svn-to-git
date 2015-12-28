@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="FamilyDaily.MemberPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FamilyDaily"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Storyboard x:Name="Story1"/>
+        <x:String x:Key="AppName">App2</x:String>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/background.jpg"/>
+        </Grid.Background>
+        <Button x:Name="backButton" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}" Margin="36,0,0,664">
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground> 
+        </Button>
+        <TextBlock x:Name="pageTitle" Text="Quốc Nhã" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="120,0,26,668" Foreground="#DEFF0000" FontWeight="Normal"/>
+
+        <Grid Margin="36,141,32,45">
+            <StackPanel HorizontalAlignment="Left" Height="570" Margin="10,10,0,0" VerticalAlignment="Top" Width="400" Background="#FF234420">
+                <Image Height="274" Margin="62,10,64,0" Source="Assets/f1.jpg" Stretch="Fill"/>
+                <ScrollViewer Height="260" Margin="0,15,0,0">
+                    <StackPanel>
+                        <StackPanel Height="64" Orientation="Horizontal">
+                            <TextBlock TextWrapping="Wrap" Text="Ngày Sinh:" Margin="20,10,0,10" FontSize="36" Foreground="White"/>
+                            <TextBlock TextWrapping="Wrap" Text=" 03/11/1991" FontSize="24" Margin="0,20,0,0" Width="175" TextAlignment="Right"/>
+                        </StackPanel>
+                        <TextBlock TextWrapping="Wrap" Margin="20,10,20,0" FontSize="36" Text="Ghi chú" Foreground="White"/>
+                        <TextBlock TextWrapping="Wrap" Text="I am the bone of my sword, steel is my body and fire is my blood" Margin="20,10" FontSize="24"/>
+
+                        <TextBlock TextWrapping="Wrap" Margin="20,10,20,0" FontSize="36" Text="Mô tả chi tiết" Foreground="White"/>
+                        <TextBlock TextWrapping="Wrap" Text="I am the bone of my sword, steel is my body and fire is my blood" Margin="20,10" FontSize="24"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+
+            <Grid HorizontalAlignment="Left" Height="570" Margin="415,10,0,0" VerticalAlignment="Top" Width="873">
+
+                <ScrollViewer Margin="0,-10,0,10">
+                    <StackPanel>
+                        <StackPanel HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Background="#FF199E0C" Width="830">
+
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Margin="0">
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,266,0">
+                                        <TextBlock TextWrapping="Wrap" Text="Ngày Viết" FontSize="20" Margin="20,5,0,5"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,10,0">
+                                        <TextBlock TextWrapping="Wrap" Text="Ngày Public" Width="282" FontSize="20" Margin="20,5,0,5" TextAlignment="Right"/>
+                                        <TextBlock TextWrapping="Wrap" Text="Đang Private
+                                   " Width="301" FontSize="20" Margin="0,5" TextAlignment="Right"/>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Margin="145,0,0,0" Height="69">
+                                    <Image Height="65" Margin="0,5,0,0" Width="65" Source="Assets/f1.jpg" Stretch="Fill"/>
+                                </StackPanel>
+
+                            </StackPanel>
+                            <TextBlock x:Name="Content" TextWrapping="Wrap" Text="TextBlock" FontSize="24" Margin="80,10,20,10"/>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
